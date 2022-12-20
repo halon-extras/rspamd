@@ -1,4 +1,26 @@
-## Rspamd (opts)
+# Rspamd anti-spam client
+
+## Installation
+
+Follow the [instructions](https://docs.halon.io/manual/comp_install.html#installation) in our manual to add our package repository and then run the below command.
+
+### Ubuntu
+
+```
+apt-get install halon-extras-rspamd
+```
+
+### RHEL
+
+```
+yum install halon-extras-rspamd
+```
+
+## Exported classes
+
+These classes needs to be [imported](https://docs.halon.io/hsl/structures.html#import) from the `extras://rspamd` module path.
+
+### Rspamd (opts)
 Scan a message with [rspamd](https://www.rspamd.com/).
 
 **Params**
@@ -24,7 +46,7 @@ The following options are available in the **tls** and **controllertls** array.
 - enabled `boolean` - Enable TLS for the specific socket
 - opts `array` - All available options can be found on [here](http://docs.halon.se/hsl/functions.html?highlight=tlssocket#TLSSocket)
 
-## scan(fp, headers)
+#### scan(fp, headers)
 Check if a message is spam or not. 
 
 **Params**
@@ -45,7 +67,7 @@ The following headers can be set in the **headers** array.
 
 **Return type**: `array`, `none` on error
 
-## learn(fp, type)
+#### learn(fp, type)
 Send a message to the controller for learning.
 
 **Params**
