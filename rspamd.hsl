@@ -4,11 +4,11 @@ class Rspamd
 
 	constructor($opts)
 	{
-		$this->opts["host"] = $opts["host"] ?? "";
+		$this->opts["host"] = $opts["host"] ?? "127.0.0.1";
 		$this->opts["port"] = number($opts["port"] ?? 11333);
 		$this->opts["tls"] = $opts["tls"] ?? [];
 
-		$this->opts["controllerhost"] = $opts["controllerhost"] ?? "";
+		$this->opts["controllerhost"] = $opts["controllerhost"] ?? "127.0.0.1";
 		$this->opts["controllerport"] = number($opts["controllerport"] ?? 11334);
 		$this->opts["controllertls"] = $opts["controllertls"] ?? [];
 

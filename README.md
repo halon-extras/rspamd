@@ -9,10 +9,10 @@ Scan a message with [rspamd](https://www.rspamd.com/).
 
 The following options are available in the **opts** array.
 
-- host `string` - IP-address of the rspamd service.
+- host `string` - IP-address of the rspamd service. The default is `127.0.0.1`.
 - port `number` - TCP port. The default is 11333.
 - tls `array` - TLS options array for the rspamd service.
-- controllerhost `string` - IP-address of the rspamd controller.
+- controllerhost `string` - IP-address of the rspamd controller. The default is `127.0.0.1`.
 - controllerport `number` - TCP port. The default is 11334.
 - controllertls `array` - TLS options array for the rspamd controller.
 - password `string` - Password for the rspamd controller.
