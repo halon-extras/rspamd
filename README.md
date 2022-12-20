@@ -24,12 +24,22 @@ The following options are available in the **tls** and **controllertls** array.
 - enabled `boolean` - Enable TLS for the specific socket
 - opts `array` - All available options can be found on [here](http://docs.halon.se/hsl/functions.html?highlight=tlssocket#TLSSocket)
 
-## scan(fp)
+## scan(fp, headers)
 Check if a message is spam or not. 
 
 **Params**
 
 - fp `File` - file object such as return type of [toFile()](https://docs.halon.io/hsl/functions.html#MailMessage.toFile). **Required**.
+- headers `array` - headers array
+
+The following headers can be set in the **headers** array.
+
+- Ip `string` - IP-address of the sender
+- From `string` - The envelope sender
+- Queue-Id `string` - The transaction ID
+- Helo `string` - The HELO of the sender
+- User `string` - The envelope recipient
+- Subject `string` - The subject
 
 **Returns**: associative array containing the result of the scan
 
