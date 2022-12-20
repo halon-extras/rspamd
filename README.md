@@ -34,11 +34,11 @@ Check if a message is spam or not.
 
 The following headers can be set in the **headers** array.
 
-- Ip `string` - IP-address of the sender
+- IP `string` - IP-address of the sender
 - From `string` - The envelope sender
 - Queue-Id `string` - The transaction ID
 - Helo `string` - The HELO of the sender
-- User `string` - The envelope recipient
+- User `string` - The username of the authenticated client
 - Subject `string` - The subject
 
 **Returns**: associative array containing the result of the scan
